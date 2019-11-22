@@ -6,12 +6,7 @@ RSpec.describe Note, type: :model do
     note = FactoryBot.create(:note)
   end
   before do
-    @user = User.create(
-      first_name: "Joe",
-      last_name:  "Tester",
-      email:      "joetester@example.com",
-      password:   "dottle-nouveau-pavilion-tights-furze",
-    )
+    @user = FactoryBot.create(:user)
 
     @project = @user.projects.create(
       name: "Test Project",
